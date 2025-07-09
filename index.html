@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GMGN Caster</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>GM / GN Caster</h1>
+    <p>Send a GM or GN message to Farcaster with one click</p>
+    <div class="buttons">
+      <button onclick="sendCast('GM')">Send GM 🌞</button>
+      <button onclick="sendCast('GN')">Send GN 🌙</button>
+    </div>
+  </div>
+
+  <script>
+    function sendCast(text) {
+      const url = `https://warpcast.com/~/compose?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
